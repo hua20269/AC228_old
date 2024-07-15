@@ -197,92 +197,7 @@ void loop()
             else
             {
             beijing3:
-                BackgroundTime3(week, battery_V, sys_outinv, sys, A_C, sys_a, sys_w, bat_m, cycle, bat_per, bt_icon);
-                BackgroundTime3_2(month, day, bat_ntc, ic_temp, hour, minute, sec, smalla, cycle);
-            }
-            break;
-        case 4:
-            if (yan == 1)
-            {
-                for (uint16_t i = 1; i < 20; i++)
-                {
-                    Backgroundyan(i);
-                    delay(50);
-                    if (digitalRead(4) == 0)
-                    {
-                        yan ^= 1;
-                        goto beijing4;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-            beijing4:
-                BackgroundTime4(battery_V, sys_outinv, sys, sys_a, sys_w, bat_per, bt_icon, ic_temp, bat_ntc, smalla, A_C);
-            }
-            break;
-        case 5:
-            if (yan == 1)
-            {
-                for (uint16_t i = 1; i < 20; i++)
-                {
-                    Backgroundyan(i);
-                    delay(50);
-                    if (digitalRead(4) == 0)
-                    {
-                        yan ^= 1;
-                        goto beijing5;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-            beijing5:
-                BackgroundTime5(smalla, battery_V, sys_outinv, sys, A_C, sys_a, sys_w, bat_per, bat_m, bt_icon, ic_temp, bat_ntc, sinkProtocol, sourceProtocol, month, day, hour, minute, sec, week);
-            }
-            break;
-        case 6:
-            if (yan == 1)
-            {
-                for (uint16_t i = 1; i < 20; i++)
-                {
-                    Backgroundyan(i);
-                    delay(50);
-                    if (digitalRead(4) == 0)
-                    {
-                        yan ^= 1;
-                        goto beijing6;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-            beijing6:
-                BackgroundTime6(sys, A_C, sys_outinv, sys_a, sys_w, battery_V, smalla, cycle, bat_per, bat_m, bat_ntc, bt_icon, sinkProtocol, sourceProtocol);
-            }
-            break;
-        case 7:
-            if (yan == 1)
-            {
-                for (uint16_t i = 1; i < 20; i++)
-                {
-                    Backgroundyan(i);
-                    delay(50);
-                    if (digitalRead(4) == 0)
-                    {
-                        yan ^= 1;
-                        goto beijing7;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-            beijing7:
-                BackgroundTime7(sys, cycle, smalla, sys_outinv, sys_a, sys_w, bat_per, bt_icon, bat_ntc, sinkProtocol, sourceProtocol);
+                BackgroundTime3(battery_V, sys_outinv, sys, sys_a, sys_w, bat_per, bt_icon, ic_temp, bat_ntc, smalla, A_C);
             }
             break;
         default:
@@ -342,20 +257,7 @@ void loop()
                                 BackgroundTime2(A_C, bt_icon, sys_outinv, sys_a, sys_w, ic_temp, bat_ntc, bat_per, cycle, sys, sinkProtocol, sourceProtocol);
                                 break;
                             case 3:
-                                BackgroundTime3(week, battery_V, sys_outinv, sys, A_C, sys_a, sys_w, bat_m, cycle, bat_per, bt_icon);
-                                BackgroundTime3_2(month, day, bat_ntc, ic_temp, hour, minute, sec, smalla, cycle);
-                                break;
-                            case 4:
-                                BackgroundTime4(battery_V, sys_outinv, sys, sys_a, sys_w, bat_per, bt_icon, ic_temp, bat_ntc, smalla, A_C);
-                                break;
-                            case 5:
-                                BackgroundTime5(smalla, battery_V, sys_outinv, sys, A_C, sys_a, sys_w, bat_per, bat_m, bt_icon, ic_temp, bat_ntc, sinkProtocol, sourceProtocol, month, day, hour, minute, sec, week);
-                                break;
-                            case 6:
-                                BackgroundTime6(sys, A_C, sys_outinv, sys_a, sys_w, battery_V, smalla, cycle, bat_per, bat_m, bat_ntc, bt_icon, sinkProtocol, sourceProtocol);
-                                break;
-                            case 7:
-                                BackgroundTime7(sys, cycle, smalla, sys_outinv, sys_a, sys_w, bat_per, bt_icon, bat_ntc, sinkProtocol, sourceProtocol);
+                                BackgroundTime3(battery_V, sys_outinv, sys, sys_a, sys_w, bat_per, bt_icon, ic_temp, bat_ntc, smalla, A_C);
                                 break;
                             default:
                                 lcdlayout01(cycle, bat_per, battery_V, ic_temp, sys_outinv, sys_a, bat_ntc, sys, smalla, A_C, bt_icon, sinkProtocol, sourceProtocol);
@@ -403,20 +305,7 @@ void loop()
                                     BackgroundTime2(A_C, bt_icon, sys_outinv, sys_a, sys_w, ic_temp, bat_ntc, bat_per, cycle, sys, sinkProtocol, sourceProtocol);
                                     break;
                                 case 3:
-                                    BackgroundTime3(week, battery_V, sys_outinv, sys, A_C, sys_a, sys_w, bat_m, cycle, bat_per, bt_icon);
-                                    BackgroundTime3_2(month, day, bat_ntc, ic_temp, hour, minute, sec, smalla, cycle);
-                                    break;
-                                case 4:
-                                    BackgroundTime4(battery_V, sys_outinv, sys, sys_a, sys_w, bat_per, bt_icon, ic_temp, bat_ntc, smalla, A_C);
-                                    break;
-                                case 5:
-                                    BackgroundTime5(smalla, battery_V, sys_outinv, sys, A_C, sys_a, sys_w, bat_per, bat_m, bt_icon, ic_temp, bat_ntc, sinkProtocol, sourceProtocol, month, day, hour, minute, sec, week);
-                                    break;
-                                case 6:
-                                    BackgroundTime6(sys, A_C, sys_outinv, sys_a, sys_w, battery_V, smalla, cycle, bat_per, bat_m, bat_ntc, bt_icon, sinkProtocol, sourceProtocol);
-                                    break;
-                                case 7:
-                                    BackgroundTime7(sys, cycle, smalla, sys_outinv, sys_a, sys_w, bat_per, bt_icon, bat_ntc, sinkProtocol, sourceProtocol);
+                                    BackgroundTime3(battery_V, sys_outinv, sys, sys_a, sys_w, bat_per, bt_icon, ic_temp, bat_ntc, smalla, A_C);
                                     break;
                                 default:
                                     lcdlayout01(cycle, bat_per, battery_V, ic_temp, sys_outinv, sys_a, bat_ntc, sys, smalla, A_C, bt_icon, sinkProtocol, sourceProtocol);
