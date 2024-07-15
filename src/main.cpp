@@ -313,8 +313,8 @@ void loop()
                                 }
                                 jsonBuffer1["chipid"] = ESP.getEfuseMac() & 0X0000FFFFFFFFFFFF;
                                 jsonBuffer1["name"] = "AC228";                     // 设备名称
-                                jsonBuffer1["software"] = "v4.0";                  // 固件版本
-                                jsonBuffer1["hardware"] = "v3.1";                  // 硬件版本
+                                jsonBuffer1["software"] = "v2.3";                  // 固件版本
+                                jsonBuffer1["hardware"] = "v2.1";                  // 硬件版本
                                 jsonBuffer1["bat_cir"] = cycle;                    // 循环次数
                                 jsonBuffer1["bat_V"] = String(battery_V, 3);       // 电池电压
                                 jsonBuffer1["bat_A"] = String(sys_a, 3);           // 电流
