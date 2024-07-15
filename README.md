@@ -6,6 +6,8 @@
 
 Flash: 4Mb
 
+无DS1302时钟
+
 3款主题  不再提供OTA
 
 LastUpdate  24/7/15
